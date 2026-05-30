@@ -52,16 +52,16 @@ def clean_text(text):
 
 data['text_cleaned'] = data['text'].apply(clean_text)
 
-
-stop_words = stopwords.words('english')
-data['text_cleaned'] = data['text_cleaned'].str.split().apply(lambda x: ' '.join([word for word in x if word not in stop_words]))
-
-
 import nltk
 
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 nltk.download('stopwords')
+
+
+stop_words = stopwords.words('english')
+data['text_cleaned'] = data['text_cleaned'].str.split().apply(lambda x: ' '.join([word for word in x if word not in stop_words]))
+
 
 from nltk.stem import WordNetLemmatizer
   

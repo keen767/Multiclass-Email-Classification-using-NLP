@@ -26,7 +26,7 @@ X_val_features = tfidf_train_val.transform(X_val)
 #As we are using k cross validation we will use only this tfidf vectorizer
 
 
-#################### Use this when only for testing train contaings train aand validation data################################
+#################### Use this when only for testing train contaings train and validation data################################
 tfidf_train_test = TfidfVectorizer(max_features=8000,sublinear_tf = True , min_df = 5, ngram_range = (1, 2), max_df = 0.4)
 
 
